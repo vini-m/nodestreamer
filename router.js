@@ -12,12 +12,12 @@ var handles404 = function (req, res) {
 // Callbacks
 var episodesCallback = function (req, res) {
     var { episodeCode } = req.params;
-    var yp_code = `YP-1R-${episodeCode}.mkv`;
-    var yp_url = 'https://yp.coco-pommel.org/ypvideo/' + yp_code;
+    //var yp_code = `YP-1R-${episodeCode}.mkv`;
+    //var yp_url = 'https://yp.coco-pommel.org/ypvideo/' + yp_code;
+    var ys_code = `YP-SV-1R-${episodeCode}.mkv`;
+    var yp_url = 'https://yp.coco-pommel.org/ypstar/' + ys_code; 
     request(yp_url).pipe(res);
-};
-
-// Routes
+}${episodeCode}utes
 router.get('/');
 router.get('/episodes/:episodeCode', episodesCallback);
 router.use(handles404);
