@@ -17,7 +17,9 @@ var episodesCallback = function (req, res) {
     var ys_code = `YP-SV-1R-${episodeCode}.mkv`;
     var yp_url = 'https://yp.coco-pommel.org/ypstar/' + ys_code; 
     request(yp_url).pipe(res);
-}${episodeCode}utes
+};
+
+// Routes
 router.get('/');
 router.get('/episodes/:episodeCode', episodesCallback);
 router.use(handles404);
